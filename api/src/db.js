@@ -3,18 +3,39 @@ const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
 const {
-  DB_USER, DB_PASSWORD, DB_HOST,
+  DB_USER, DB_PASSWORD, DB_HOST, DB_NAME 
 } = process.env;
 
-const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/food`, {
-  logging: false, // set to console.log to see the raw SQL queries
-  native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-});
-const basename = path.basename(__filename);
+const herokuDb = {
+  user: DB_USER || "hxhwaoxdnpzrmu",
+  host: DB_HOST || "ec2-52-73-184-24.compute-1.amazonaws.com",
+  password: DB_PASSWORD || "32d978e2795493574aa45120b96b88bf3e1723776378afb9f061310984484d43",
+  //name: !DB_NAME ? "sneakers" : "d8rp7epoiokuee"
+  name: DB_NAME || "d60e2532e9mfj1"
+}
 
+const sequelize = new Sequelize(`postgres://${herokuDb.user}:${herokuDb.password}@${herokuDb.host}/${herokuDb.name}`, {
+  logging: false, // set to console.log to see the raw SQL queries
+  native: false,
+  dialectOptions: DB_NAME || {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false
+    }
+  }// lets Sequelize know we can use pg-native for ~30% more speed
+});
+
+
+try {
+  sequelize.authenticate();
+  console.log('Connection has been established successfully.');
+} catch (error) {
+  console.error('Unable to connect to the database:', error);
+}
+const basename = path.basename(__filename);
 const modelDefiners = [];
 
-// Leemos todos los archivos de la carpeta Models, los requerimos y agregamos al arreglo modelDefiners
+
 fs.readdirSync(path.join(__dirname, '/models'))
   .filter((file) => (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js'))
   .forEach((file) => {

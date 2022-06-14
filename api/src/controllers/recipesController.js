@@ -2,7 +2,6 @@ require('dotenv').config();
 const { Op } = require("sequelize");
 const {Recipe, Diet} = require('../db')
 const axios = require('axios').default;
-const {API_KEY} = process.env;
 
 // [ ] Los campos mostrados en la ruta principal para cada receta (imagen, nombre, tipo de plato y tipo de dieta)
 // [ ] Resumen del plato
@@ -27,8 +26,7 @@ module.exports = {
         const id = req.params.idRecipe;
 
         try {
-            console.log(id, API_KEY)
-            const recipe = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`);
+            const recipe = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=87e5dc4b352948918435b9b5c8d5c358`);
             const recipeInfo = {
                 id: recipe.data.id,
                 img: recipe.data.image,
@@ -40,6 +38,7 @@ module.exports = {
                 healthScore: recipe.data.healthScore,
                 instructions: recipe.data.instructions
             }
+            console.log(recipe.data)
             res.json(recipeInfo)
         
         } catch (error) {
@@ -68,7 +67,7 @@ module.exports = {
         const nameCapitalized = name.charAt(0).toUpperCase() + name.slice(1)
         
         if(name){
-            const recipesMatch = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?&number=100&addRecipeInformation=true&apiKey=${API_KEY}`);
+            const recipesMatch = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?&number=100&addRecipeInformation=true&apiKey=87e5dc4b352948918435b9b5c8d5c358`);
             
             const dbResults = await Recipe.findAll({
                 include: {model: Diet,
@@ -101,7 +100,7 @@ module.exports = {
 
     requireQuery: async(req, res, next) => {
         if(!req.query.name){
-            const recipesMatch = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?&number=100&addRecipeInformation=true&apiKey=${API_KEY}`);
+            const recipesMatch = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?&number=100&addRecipeInformation=true&apiKey=87e5dc4b352948918435b9b5c8d5c358`);
             
             const dbResults = await Recipe.findAll(
                 {include: {
