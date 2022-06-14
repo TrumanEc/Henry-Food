@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Henry_Food/static/css/main.7009bf89.chunk.css",
-    "main.js": "/Henry_Food/static/js/main.9cb61b27.chunk.js",
-    "main.js.map": "/Henry_Food/static/js/main.9cb61b27.chunk.js.map",
-    "runtime-main.js": "/Henry_Food/static/js/runtime-main.5b40a77a.js",
-    "runtime-main.js.map": "/Henry_Food/static/js/runtime-main.5b40a77a.js.map",
-    "static/js/2.b8c93ed0.chunk.js": "/Henry_Food/static/js/2.b8c93ed0.chunk.js",
-    "static/js/2.b8c93ed0.chunk.js.map": "/Henry_Food/static/js/2.b8c93ed0.chunk.js.map",
-    "static/js/3.a3dfe94d.chunk.js": "/Henry_Food/static/js/3.a3dfe94d.chunk.js",
-    "static/js/3.a3dfe94d.chunk.js.map": "/Henry_Food/static/js/3.a3dfe94d.chunk.js.map",
-    "index.html": "/Henry_Food/index.html",
-    "static/css/main.7009bf89.chunk.css.map": "/Henry_Food/static/css/main.7009bf89.chunk.css.map",
-    "static/js/2.b8c93ed0.chunk.js.LICENSE.txt": "/Henry_Food/static/js/2.b8c93ed0.chunk.js.LICENSE.txt"
+    "main.css": "/trumanec.github.io/Henry-Food/static/css/main.7009bf89.chunk.css",
+    "main.js": "/trumanec.github.io/Henry-Food/static/js/main.5dec107f.chunk.js",
+    "main.js.map": "/trumanec.github.io/Henry-Food/static/js/main.5dec107f.chunk.js.map",
+    "runtime-main.js": "/trumanec.github.io/Henry-Food/static/js/runtime-main.0977919d.js",
+    "runtime-main.js.map": "/trumanec.github.io/Henry-Food/static/js/runtime-main.0977919d.js.map",
+    "static/js/2.b8c93ed0.chunk.js": "/trumanec.github.io/Henry-Food/static/js/2.b8c93ed0.chunk.js",
+    "static/js/2.b8c93ed0.chunk.js.map": "/trumanec.github.io/Henry-Food/static/js/2.b8c93ed0.chunk.js.map",
+    "static/js/3.a3dfe94d.chunk.js": "/trumanec.github.io/Henry-Food/static/js/3.a3dfe94d.chunk.js",
+    "static/js/3.a3dfe94d.chunk.js.map": "/trumanec.github.io/Henry-Food/static/js/3.a3dfe94d.chunk.js.map",
+    "index.html": "/trumanec.github.io/Henry-Food/index.html",
+    "static/css/main.7009bf89.chunk.css.map": "/trumanec.github.io/Henry-Food/static/css/main.7009bf89.chunk.css.map",
+    "static/js/2.b8c93ed0.chunk.js.LICENSE.txt": "/trumanec.github.io/Henry-Food/static/js/2.b8c93ed0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5b40a77a.js",
+    "static/js/runtime-main.0977919d.js",
     "static/js/2.b8c93ed0.chunk.js",
     "static/css/main.7009bf89.chunk.css",
-    "static/js/main.9cb61b27.chunk.js"
+    "static/js/main.5dec107f.chunk.js"
   ]
 }
