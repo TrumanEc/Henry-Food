@@ -9,7 +9,7 @@ function validate(input) {
 
     if (!input.name) {
         errors.name = 'Name is required';
-    } else if (!typeof(input.name) === 'string') {
+    } else if (!typeof(input.name) === 'string' || input.name === null) {
         errors.name = 'Name is invalid';
     }
 
@@ -84,7 +84,9 @@ export default function AddRecipe() {
     }
 
     const handleClick = () =>{
+        if (!errors === {}) {
             dispatch(postRecipe(input))
+        }
     }
 
     return (
@@ -152,7 +154,7 @@ export default function AddRecipe() {
                     
                 </div>
             </section>
-            <button onClick={handleClick} disabled={errors === {} ? true : false} >Done</button>
+            <button onClick={handleClick}  >Done</button>
             {
                 response && (<h2 className={s.response}>{response.msg}</h2>)
             }

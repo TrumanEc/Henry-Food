@@ -11,18 +11,18 @@ export default function Landing(){
 
     return (
         <div className={s.landing}>
-        <div className={s.div}>
-            <div className={s.content}>
-                <h2>HENRY</h2>
-                <h2>HENRY</h2>
-            </div><div className={s.content}>
-                <h2>FOOD</h2>
-                <h2>FOOD</h2>
+            <div className={s.div}>
+                <div className={s.content}>
+                    <h2>HENRY</h2>
+                    <h2>HENRY</h2>
+                </div><div className={s.content}>
+                    <h2>FOOD</h2>
+                    <h2>FOOD</h2>
+                </div>
             </div>
-        </div>
-        <Link to='/home'>
-            <button type="button" >Start Now</button>
-        </Link>
+            <Link to='/home'>
+                <button type="button" >Start Now</button>
+            </Link>
         </div>
     )
 }

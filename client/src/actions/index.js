@@ -3,7 +3,7 @@ import axios from 'axios'
 export const getRecipes = () => async dispatch => {
     
     try{
-        const recipes = await axios.get('http://localhost:3001/recipes')
+        const recipes = await axios.get('https://henry-food-back.herokuapp.com/recipes')
         console.log('accion get recipes')
         console.log(recipes)
         dispatch( {
@@ -19,7 +19,7 @@ export const getRecipes = () => async dispatch => {
 export const getRecipesMatch = (name) => async dispatch => {
     
     try{
-        const recipes = await axios.get(`http://localhost:3001/recipes?name=${name}`)
+        const recipes = await axios.get(`https://henry-food-back.herokuapp.com/recipes?name=${name}`)
         console.log('accion get match recipes')
         console.log(recipes.data)
         dispatch( {
@@ -36,7 +36,7 @@ export const getRecipesMatch = (name) => async dispatch => {
 export const getRecipeInfo = (id) => async dispatch => {
     
     try{
-        const info = await axios.get(`http://localhost:3001/recipes/${id}`)
+        const info = await axios.get(`https://henry-food-back.herokuapp.com/recipes/${id}`)
         console.log('accion get recipe info')
         console.log(info.data)
         dispatch( {
@@ -52,7 +52,7 @@ export const getRecipeInfo = (id) => async dispatch => {
 
 export const getTypes = () => async dispatch => {
     try{
-        const dietTypes = await axios.get(`http://localhost:3001/types`)
+        const dietTypes = await axios.get(`https://henry-food-back.herokuapp.com/types`)
         console.log('accion get types')
         console.log(dietTypes)
         dispatch( {
@@ -68,8 +68,8 @@ export const getTypes = () => async dispatch => {
 
 export const postRecipe = (newRecipe) => async dispatch => {
     try{
-        // const recipes = (name) ? await axios.get(`http://localhost:3001/recipes?name=${name}`) : await axios.get(`http://localhost:3001/recipes`);
-        const recipe = await axios.post(`http://localhost:3001/recipes`, newRecipe)
+        // const recipes = (name) ? await axios.get(`https://henry-food-back.herokuapp.com/recipes?name=${name}`) : await axios.get(`https://henry-food-back.herokuapp.com/recipes`);
+        const recipe = await axios.post(`https://henry-food-back.herokuapp.com/recipes`, newRecipe)
         console.log('accion post recipe')
         console.log(recipe)
         getRecipes();
