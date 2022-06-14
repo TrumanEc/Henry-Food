@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import './styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {  HashRouter } from 'react-router-dom'
+import {  BrowserRouter } from 'react-router-dom'
 import store from './store/store'
 import {  Provider  } from 'react-redux'
 
 ReactDOM.render(
   <Provider store={store}>
-    <HashRouter basename={`/${process.env.PUBLIC_URL}`}>
+    <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
         <App />
-      </HashRouter>
+      </BrowserRouter>
   </Provider>,
   document.getElementById('root')
 );
