@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/TrumanEc/Henry-Food/static/css/main.7009bf89.chunk.css",
-    "main.js": "/TrumanEc/Henry-Food/static/js/main.2b9ea388.chunk.js",
-    "main.js.map": "/TrumanEc/Henry-Food/static/js/main.2b9ea388.chunk.js.map",
+    "main.js": "/TrumanEc/Henry-Food/static/js/main.f746320e.chunk.js",
+    "main.js.map": "/TrumanEc/Henry-Food/static/js/main.f746320e.chunk.js.map",
     "runtime-main.js": "/TrumanEc/Henry-Food/static/js/runtime-main.7a75a660.js",
     "runtime-main.js.map": "/TrumanEc/Henry-Food/static/js/runtime-main.7a75a660.js.map",
     "static/js/2.b8c93ed0.chunk.js": "/TrumanEc/Henry-Food/static/js/2.b8c93ed0.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.7a75a660.js",
     "static/js/2.b8c93ed0.chunk.js",
     "static/css/main.7009bf89.chunk.css",
-    "static/js/main.2b9ea388.chunk.js"
+    "static/js/main.f746320e.chunk.js"
   ]
 }
