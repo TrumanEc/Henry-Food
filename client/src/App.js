@@ -9,7 +9,7 @@ import React from 'react';
 function App() {
   return (
     <div className='App'>
-      <Route exact path="" component={Landing} />
+      <Route exact path="/" component={Landing} />
       <Route exact path='/home' component={Home} />
       <Route exact path='/recipe/:idRecipe' component={RecipeInfo} />
       <Route exact path='/createRecipe' component={AddRecipe} />
