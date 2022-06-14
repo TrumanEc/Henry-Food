@@ -1,5 +1,5 @@
 import './styles/App.css';
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import Landing from './components/Landing.jsx'
 import Home from './components/Home.jsx'
 import RecipeInfo from './components/RecipeInfo';
@@ -9,10 +9,23 @@ import React from 'react';
 function App() {
   return (
     <div className='App'>
-      <Route exact path="/" component={Landing} />
-      <Route exact path='/home' component={Home} />
-      <Route exact path='/recipe/:idRecipe' component={RecipeInfo} />
-      <Route exact path='/createRecipe' component={AddRecipe} />
+    <Switch>
+      <Route exact path='/home'>
+        <Home/>
+      </Route>
+      <Route exact path='/recipe/:idRecipe'>
+      <RecipeInfo/>
+      </Route>
+
+      <Route exact path='/createRecipe'>
+      <AddRecipe/>
+      </Route>
+      <Route exact path="/">
+      <Landing/>
+      </Route>
+
+    </Switch>
+      
     </div>
   );
 }
